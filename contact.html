@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.0/css/bootstrap.min.css">
+    <script src="assets/bootstrap-5.3.0/js/bootstrap.min.js" defer></script>
+    <!-- Main Styles and Scripts -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/main.js" defer></script>
+    <title>Dicto Mate</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container my-5">
+            <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
+                <div class="col">
+                    <div class="heading">
+                        <h2>Send <span>Message</span></h2>
+                    </div>
+                    <p class="p-1 text-center">Please provide us with your name and a brief message detailing your
+                        feedback. We value your input.</p>
+                    <form action="" class="text-center">
+                        <div class="form-floating mb-4">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="name" required>
+                            <label for="name" class="form-label">Your Name Here</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <textarea name="message" id="message" class="form-control" placeholder="message"
+                                style="height: 180px;" required></textarea>
+                            <label for="name" class="form-label">Your Message Here</label>
+                        </div>
+                        <button class="btn btn-primary mb-4" value="submit">Send</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <div class="contact-img">
+                        <img src="assets/img/contact.png" alt="Contact Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

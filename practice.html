@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.0/css/bootstrap.min.css">
+    <script src="assets/bootstrap-5.3.0/js/bootstrap.min.js" defer></script>
+    <!-- Main Styles and Scripts -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/js/practice.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <title>Dicto Mate</title>
+</head>
+
+<body>
+    <header></header>
+    <div class="heading">
+        <h1>Let's <span>Practice</span></h1>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row d-flex justify-content-center" data-main-start>
+                <div class="col col-12 col-md-6 text-center">
+                    <div class="heading">
+                        <h4 class="fw-bold m-2" data-start-dicto-name></h4>
+                        <label class="form-label mt-2" for="voice">Select Prefer Voice</label>
+                        <select class="form-select my-2" name="voice" data-select></select>
+                    </div>
+                    <button class="btn btn-primary btn-lg mb-3" data-test-voice-btn><i class="bi bi-cassette"></i></button>
+                    <button class="btn btn-primary btn-lg mb-3" data-start-btn><i class="bi bi-caret-right"></i></button>
+                    <a href="dicto.html" class="btn btn-danger btn-lg mb-3"><i class="bi bi-x-lg"></i></a>
+                    <p class="my-5"> Click Cassette button for listen selected voice<br>
+                        Click play button for stard practice<br>
+                        Close Button for back to see Dicto.
+                    </p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center d-none" data-main-practice>
+                <div class="col col-12 col-md-6 text-center">
+                    <div class="heading">
+                        <div class="dicto-name mb-5">
+                            <h4 class="fw-bold m-2" data-dicto-name></h4>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg m-3" data-voice-btn><i class="bi bi-cassette"></i></button>
+                    <input type="text" name="word" id="word" class="form-control form-control-lg mb-3"
+                        placeholder="Type your word Here" data-practice-word-input>
+                    <button class="btn btn-primary btn-lg mb-3" data-practice-next-btn><i
+                            class="bi bi-arrow-right"></i></button>
+                    <a href="dicto.html" class="btn btn-danger btn-lg mb-3"><i class="bi bi-x-lg"></i></a>
+                    <button title="Double Click for Restart" class="btn btn-danger btn-lg mb-3"
+                        ondblclick="location.reload()"><i class="bi bi-arrow-clockwise"></i></button>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination d-flex justify-content-center">
+                            <li class="page-item"><a class="page-link disabled" href="#">Still Word Count</a></li>
+                            <li class="page-item"><a class="page-link" data-still-words>2</a></li>
+                        </ul>
+                    </nav>
+                    <p class="my-5"> Click Cassette button for listen word again.<br>
+                        Click right arrow for next word.<br>
+                        Close Button for back to see Dicto.
+                        Double click reload button for start again. 
+                    </p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center d-none" data-main-result>
+                <div class="col col-12 col-md-6 text-center" data-result>
+                    <div class="correct-word-count m-5" data-correct-word-count></div>
+                    <div class="correct-words m-3">
+                        <div class="card text-center bg-primary text-white">
+                            <div class="card-header">
+                                Correct Words
+                            </div>
+                            <ul class="list-group list-group-flush" data-correct-words>
+                                <!-- <li class="list-group-item">An item</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="wrong-words m-3">
+                        <div class="card text-center bg-primary text-white">
+                            <div class="card-header">
+                                Wrong Words
+                            </div>
+                            <ul class="list-group list-group-flush" data-wrong-words>
+                                <!-- <li class="list-group-item">An item</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="dicto.html" class="btn btn-primary btn-lg mb-3">Dicto</a>
+                    <button title="Double Click for Restart" class="btn btn-danger btn-lg mb-3"
+                        onclick="location.reload()">Restart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
