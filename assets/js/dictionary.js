@@ -23,7 +23,8 @@ pasteBtn.addEventListener('click', async () => {
 
 function data(result, word) {
     if (!result.title) {
-        wordElm.innerHTML = `Word - ${word}`
+        console.log(result)
+        wordElm.innerHTML = `${word}<br><hr>`
         for(let i = 0; i < result[0].meanings.length; i++){
             for( let j = 0; j < result[0].meanings[i].definitions.length; j++){
                 definitionElm.innerHTML += `${result[0].meanings[i].definitions[j].definition}<br><br>` 
