@@ -21,6 +21,7 @@ Wgth 300,400
 
 :root{
     --primary-color: #2fda79;
+    --dark-primary-color: #219c57;
     --secondary-color: #346ef5;
     --dark-color: #0A1128;
     --accent-color: #346ef5;
@@ -28,24 +29,35 @@ Wgth 300,400
 }
 
 /* genaral css */
-*{
+body{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+}
+
+::placeholder{
+    padding-bottom: 5px;
 }
 .heading{
     font-family: 'Lora', serif;
     text-align: center;
     margin: 25px auto;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: bolder;
+}
+.card{
+    border-radius: 0px;
+}
+.form-control{
+    border-radius: 0px;
+    border: 1px solid var(--dark-primary-color);
 }
 .heading span{
     color: var(--primary-color);
     font-family: 'Courgette', cursive;
     text-transform: capitalize;
 }
-.section-padding{
+section{
     padding-top: 40px;
     padding-bottom: 25px;
 }
@@ -57,13 +69,38 @@ Wgth 300,400
 }
 .btn{
     transition: .5s all ease-in-out;
+    border-radius: 0px;
+    border: none;
 }
-.btn:hover{
-    box-shadow: 2px 2px 0px #8a8a8a86;
+.btn-primary{
+    background-color: var(--primary-color);
 }
+.btn-primary:hover{
+    background-color: var(--dark-primary-color);
+}
+
 
 /* Index page styles */
 .hero h1{
     font-size: 50px;
     color: var(--primary-color);
 }
+.other-products .btn-primary{
+    background-color: #fff;
+    color: #000000;
+}
+.other-products .btn-primary:hover{
+    background-color: #f6ffdc;
+    color: #000000;
+}
+.voicy-text{
+    background: linear-gradient(to left, #da34ff , #000000 60%);
+}
+.rock-paper{
+    background: linear-gradient(to left, #000000 50% , #FC6121 );
+}
+.soon{
+    background: linear-gradient(to left, var(--primary-color) , #000000 60%);
+}
+
+/* Dicto Page Styles */

@@ -5,15 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-84DJY1YKGW"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-84DJY1YKGW');
-    </script>
+    <!-- Icons -->
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/bootstrap-5.3.0/css/bootstrap.min.css">
     <script src="assets/bootstrap-5.3.0/js/bootstrap.min.js" defer></script>
@@ -32,24 +26,23 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-6 text-center">
-                
+
                 <!-- Create New Dicto -->
 
                 <div class="create-dicto-elm" data-create-dicto-elm>
-                    <div class="form-floating">
-                        <input type="text" class="form-control form-control-lg mb-3 text-capitalize" placeholder="dicto" data-dicto-input>
-                        <label for="dicto">Name for Dicto</label>
-                    </div>
+
+                    <input type="text" class="form-control form-control-lg mb-3 text-capitalize"
+                        placeholder="Name For Your Dicto" data-dicto-input>
                     <button class="btn btn-primary btn-lg" data-create-dicto-btn>Create Dicto</button>
                 </div>
 
                 <!-- Add words for created Dicto -->
 
                 <div class="add-words d-none" data-add-words-elm>
-                    <div class="form-floating">
-                        <input type="text" class="form-control form-control-lg mb-3 text-capitalize" placeholder="word" data-word-input>
-                        <label for="word">Type Word Correctly</label>
-                    </div>
+
+                    <input type="text" class="form-control form-control-lg mb-3 text-capitalize"
+                        placeholder="Add Your Word" data-word-input>
+
                     <button class="btn btn-primary btn-lg mb-2" data-add-word-btn>Add Word</button>
                     <button class="btn btn-primary btn-lg mb-2" data-reset-dicto-btn>Save Dicto</button>
 
@@ -61,25 +54,27 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-3" data-show-all-dicto-elm>
-                <!--                 
-                <div class="col mb-4">
-                    <div class="card">
-                        <div class="card-header">
-                            Featured
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                        </ul>
-                        <div class="card-body">
-                            <a href="practice.html" class="btn btn-primary">Practice</a>
+        <section class="all-dicto">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3" data-show-all-dicto-elm>
+                    <!--                 
+                    <div class="col mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Featured
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="practice.html" class="btn btn-primary">Practice</a>
+                            </div>
                         </div>
                     </div>
+                     -->
                 </div>
-                 -->
             </div>
-        </div>
+        </section>
     </div>
     <footer class="d-none"></footer>
 </body>
