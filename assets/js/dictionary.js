@@ -2,7 +2,7 @@ const pasteBtn = document.querySelector('[data-paste-btn]')
 const input = document.querySelector('[data-word-input]')
 const searchBtn = document.querySelector('[data-search-btn]')
 
-
+const wordElm = document.querySelector('[data-word]')
 const definitionElm = document.querySelector('[data-definition]')
 const audioElm = document.querySelector('[data-audio-elm]')
 const partOfElm = document.querySelector('[data-partof]')
@@ -23,8 +23,7 @@ pasteBtn.addEventListener('click', async () => {
 
 function data(result, word) {
     if (!result.title) {
-        console.log(result)
-
+        wordElm.innerHTML = `Word - ${word}`
         for(let i = 0; i < result[0].meanings.length; i++){
             for( let j = 0; j < result[0].meanings[i].definitions.length; j++){
                 definitionElm.innerHTML += `${result[0].meanings[i].definitions[j].definition}<br><br>` 
