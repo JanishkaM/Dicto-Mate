@@ -1,8 +1,16 @@
 const header = document.querySelector('header')
 const footer = document.querySelector('footer')
+
+
+window.onload = function(){
+  //hide the preloader
+  document.querySelector(".preloader").style.display = "none";
+}
+
+
 header.innerHTML = 
 `
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-md d-none d-md-block navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="index.html"><div class="logo">Dicto Mate</div></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,11 +37,27 @@ header.innerHTML =
     </div>
   </div>
 </nav>
+<nav class="mob-nav d-block d-md-none">
+        <ul class="nav justify-content-center position-fixed">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><i class="px-2 rounded bi bi-house"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dicto.html"><i class="px-2 rounded bi bi-pen"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dictionary.html"><i class="px-2 rounded bi bi-journal-bookmark"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true"><i class="px-2 rounded bi bi-envelope"></i></a>
+            </li>
+          </ul>
+    </nav>
 `
 
 footer.innerHTML += 
 `
-<div class="text-bg-primary p-4">
+<div class="text-bg-primary p-4 d-none d-md-block">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3">
                 <div class="col d-flex flex-column align-items-center align-items-md-start mb-5">
