@@ -1,16 +1,31 @@
 const header = document.querySelector('header')
 const footer = document.querySelector('footer')
+const preloader = document.querySelector(".preloader")
 
+preloader.innerHTML = `
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    <span class="visually-hidden">Loading...</span>
+  </button>
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    <span class="visually-hidden">Loading...</span>
+  </button>
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    <span class="visually-hidden">Loading...</span>
+  </button>   
+`
 
 window.onload = function(){
   //hide the preloader
-  document.querySelector(".preloader").style.display = "none";
+  preloader.style.display = "none";
 }
 
 
 header.innerHTML = 
 `
-<nav class="navbar navbar-expand-md d-none d-md-block navbar-dark bg-primary">
+<nav class="des-nav navbar navbar-expand-md d-none d-md-block navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="index.html"><div class="logo">Dicto Mate</div></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,18 +53,18 @@ header.innerHTML =
   </div>
 </nav>
 <nav class="mob-nav d-block d-md-none">
-        <ul class="nav justify-content-center position-fixed">
+        <ul class="nav justify-content-around position-fixed">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"><i class="px-2 rounded bi bi-house"></i></a>
+              <a class="nav-link active p-0" aria-current="page" href="index.html"><i class="bi bi-house"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dicto.html"><i class="px-2 rounded bi bi-pen"></i></a>
+              <a class="nav-link p-0" href="dicto.html"><i class="bi bi-pencil-square"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="dictionary.html"><i class="px-2 rounded bi bi-journal-bookmark"></i></a>
+              <a class="nav-link p-0" href="dictionary.html"><i class="bi bi-journal-text"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true"><i class="px-2 rounded bi bi-envelope"></i></a>
+              <a class="nav-link p-0" href="contact.html" ><i class="bi bi-envelope"></i></a>
             </li>
           </ul>
     </nav>
@@ -92,7 +107,7 @@ footer.innerHTML +=
             </ul>
                 </div>
             </div>
-            <div class="copyright text-center">© 2023 - 2023 DictoMate - All Rights Reserved.<br> Version: 1.1.0</div>
+            <div class="copyright text-center">© 2023 - 2023 DictoMate - All Rights Reserved.<br> Version: 1.2.0</div>
         </div>
     </div>
 `
