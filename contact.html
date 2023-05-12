@@ -21,26 +21,20 @@
 <body>
     <div class="preloader"></div>
     <header></header>
-    <main class="mb-5 mb-md-0"> 
+    <main class="mb-5 mb-md-0">
+        <h2 class="title">Send <span>Message</span></h2>
         <div class="container my-5">
             <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
                 <div class="col">
-                    <div class="heading">
-                        <h2>Send <span>Message</span></h2>
-                    </div>
-                    <p class="p-1 text-center">Please provide us with your name and a brief message detailing your
+                    <p class="p-1 text-center text-md-start">Please provide us with your name and a brief message detailing your
                         feedback. We value your input.</p>
-                    <form action="" class="text-center">
-                        <div class="form-floating mb-4">
-                            <input type="text" name="name" id="name" class="form-control" placeholder="name" required>
-                            <label for="name" class="form-label">Your Name Here</label>
-                        </div>
-                        <div class="form-floating mb-4">
-                            <textarea name="message" id="message" class="form-control" placeholder="message"
-                                style="height: 180px;" required></textarea>
-                            <label for="name" class="form-label">Your Message Here</label>
-                        </div>
-                        <button class="btn btn-primary mb-4 btn-lg" value="submit">Send</button>
+                    <form class="text-center" name="Dicto Mate" method="POST" data-netlify="true">
+                        <input type="text" name="name" id="name" class="form-control px-2 py-3 my-2" placeholder="Your Name"
+                            style="border-radius: 5px;" required>
+                        <textarea name="message" id="message" class="form-control px-2 py-3 my-2" placeholder="Your message"
+                            style="height: 180px; border-radius: 5px;" required></textarea>
+                        <input type="hidden" name="Dicto Mate Form" value="contact">
+                        <button class="btn btn-primary mb-4 px-4 py-3" value="submit"><i class="bi bi-send pe-2"></i>Send</button>
                     </form>
                 </div>
                 <div class="col">

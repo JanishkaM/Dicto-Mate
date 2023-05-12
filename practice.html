@@ -22,9 +22,7 @@
 <body>
     <div class="preloader"></div>
     <header></header>
-    <div class="heading">
-        <h1>Let's <span>Practice</span></h1>
-    </div>
+    <h1 class="title">Let's <span>Practice</span></h1>
     <main class="mb-5 mb-md-0">
         <div class="container">
             <div class="row d-flex justify-content-center" data-main-start>
@@ -39,10 +37,17 @@
                     <button class="btn btn-primary btn-lg mb-3" data-start-btn><i
                             class="bi bi-caret-right"></i></button>
                     <a href="dicto.html" class="btn btn-danger btn-lg mb-3"><i class="bi bi-x-lg"></i></a>
-                    <p class="my-5"> Click Cassette button for listen selected voice<br>
-                        Click play button for stard practice<br>
-                        Close Button for back to see Dicto.
-                    </p>
+                    <div class="my-5 text-start">
+                        <h3 class="fw-bold mb-4 text-center">Instructions</h3>
+                        <p class="mb-4">
+                            <i class="bi bi-cassette px-3 py-2 bg-primary rounded-5 text-white"></i>
+                            Listen selected <b>voice</b>
+                        </p>
+                        <p class="mb-4"><i class="bi bi-caret-right px-3 py-2 bg-primary rounded-5 text-white"></i>
+                            <b>start</b> practice</p>
+                        <p class="mb-4"> <i class="bi bi-x-lg px-3 py-2 bg-primary rounded-5 text-white"></i>
+                            <b>Back</b> to see Dicto.</p>
+                    </div>
                 </div>
             </div>
             <div class="row d-flex justify-content-center d-none" data-main-practice>
@@ -55,11 +60,11 @@
                     <button class="btn btn-primary btn-lg m-3" data-voice-btn><i class="bi bi-cassette"></i></button>
                     <input type="text" name="word" id="word" class="form-control form-control-lg mb-3"
                         placeholder="Type your word Here" data-practice-word-input>
-                    <button class="btn btn-primary btn-lg mb-3" data-practice-next-btn><i
-                            class="bi bi-arrow-right"></i></button>
                     <a href="dicto.html" class="btn btn-danger btn-lg mb-3"><i class="bi bi-x-lg"></i></a>
                     <button title="Double Click for Restart" class="btn btn-danger btn-lg mb-3"
                         ondblclick="location.reload()"><i class="bi bi-arrow-clockwise"></i></button>
+                    <button class="btn btn-primary btn-lg mb-3" data-practice-next-btn><i
+                            class="bi bi-arrow-right"></i></button>
 
                     <nav aria-label="Page navigation example">
                         <ul class="pagination d-flex justify-content-center">
@@ -67,11 +72,20 @@
                             <li class="page-item"><a class="page-link" data-still-words>2</a></li>
                         </ul>
                     </nav>
-                    <p class="my-5"> Click Cassette button for listen word again.<br>
-                        Click right arrow for next word.<br>
-                        Close Button for back to see Dicto.
-                        Double click reload button for start again.
-                    </p>
+                    <div class="my-5 text-start">
+                        <h3 class="fw-bold mb-4 text-center">Instructions</h3>
+                        <p class="mb-4"><i class="bi bi-cassette px-3 py-2 bg-primary rounded-5 text-white"></i>
+                            Repeat<b>Word</b></p>
+                        <p class="mb-4"><i class="bi bi-arrow-right px-3 py-2 bg-primary rounded-5 text-white"></i>
+                            <b>Next</b>
+                            Word</p>
+                        <p class="mb-4"><i class="bi bi-x-lg px-3 py-2 bg-primary rounded-5 text-white"></i>
+                            <b>End</b> practice
+                        </p>
+                        <p class="mb-4"><i class="bi bi-arrow-clockwise px-3 py-2 bg-primary rounded-5 text-white"></i>
+                            <b>Restart</b> practice (Double click)
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="row d-flex justify-content-center d-none" data-main-result>
