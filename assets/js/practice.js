@@ -93,20 +93,20 @@ startBtn.addEventListener('click', () => {
       practiceWordsBtn.addEventListener("click", () => {
         if (stillWordsCount) {
           if (practiceWordsInput.value) {
-            pracWord = practiceWordsInput.value
+            pracWord = practiceWordsInput.value.toLowerCase()
             console.log(pracWord)
             practiceWordsInput.value = ""
 
             if (practiceWordsArry[wordCount] === pracWord) {
               correctWordsArry.push(practiceWordsArry[wordCount])
-              correctWordsEl.innerHTML += `<li class="list-group-item">${practiceWordsArry[wordCount]}</li>`
+              correctWordsEl.innerHTML += `<li class="list-group-item text-uppercase">${practiceWordsArry[wordCount]}</li>`
               console.log("correct")
               correctWordsCount += 1
               correctWordsCountEl.innerHTML = `<h4>Correct Word Count : ${correctWordsCount}/${practiceWordsArry.length}</h4>`
             } else {
               wrongWordsArry.push(practiceWordsArry[wordCount])
               console.log("wrong")
-              wrongWordsEl.innerHTML += `<li class="list-group-item">${practiceWordsArry[wordCount]}  <b>${pracWord}</b></li>`
+              wrongWordsEl.innerHTML += `<li class="list-group-item text-uppercase">${practiceWordsArry[wordCount]}  <b>${pracWord}</b></li>`
             }
 
             wordCount += 1

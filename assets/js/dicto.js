@@ -45,7 +45,7 @@ createDictoBtn.addEventListener('click', () => {
 
 addWordBtn.addEventListener('click', addword = () => {
     if (getWordinput.value) {
-        let word = getWordinput.value
+        let word = getWordinput.value.toLowerCase()
         wordsArry.push(word)
         showReslt.innerHTML += `
 
