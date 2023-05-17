@@ -20,9 +20,57 @@
 
 <body>
     <div class="preloader"></div>
-    <header></header>
+    <header>
+        <nav class="des-nav navbar navbar-expand-md d-none d-md-block navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">Dicto Mate</div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dicto.html">Dicto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dictionary.html">Dictionary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link special" href="https://voicytext.netlify.app/" target="_blank">Voicy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="mob-nav d-block d-md-none">
+            <ul class="nav justify-content-around position-fixed">
+                <li class="nav-item">
+                    <a class="nav-link p-0" aria-current="page" href="index.html"><i class="bi bi-house"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="dicto.html"><i class="bi bi-pencil-square"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active p-0" href="dictionary.html"><i class="bi bi-journal-text"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="contact.html"><i class="bi bi-envelope"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main class="mb-5 mb-md-0">
-            <h1 class="title">Dictionary <span>Mate</span></h1>
+        <h1 class="title">Dictionary <span>Mate</span></h1>
         <div class="container">
             <div class="row d-flex justify-content-center my-3">
                 <div class="col d-flex col-12 col-md-8 text-center d-flex flex-column flex-md-row align-items-center">
@@ -41,7 +89,7 @@
                     <h2 class="m-2"><i class="bi bi-check small"></i> Definition</h2>
                     <p class="m-2" data-definition>Search Your Word</p>
                     <hr>
-                    <h2 class="m-2" ><i class="bi bi-check small"></i> Part Of Speach</h2>
+                    <h2 class="m-2"><i class="bi bi-check small"></i> Part Of Speach</h2>
                     <p class="m-2" data-partof>-</p>
                     <hr>
                     <h2 class="m-2"><i class="bi bi-check small"></i> Synonyms</h2>

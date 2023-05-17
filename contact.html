@@ -20,26 +20,76 @@
 
 <body>
     <div class="preloader"></div>
-    <header></header>
+    <header>
+        <nav class="des-nav navbar navbar-expand-md d-none d-md-block navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">Dicto Mate</div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dicto.html">Dicto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dictionary.html">Dictionary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link special" href="https://voicytext.netlify.app/" target="_blank">Voicy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="mob-nav d-block d-md-none">
+            <ul class="nav justify-content-around position-fixed">
+                <li class="nav-item">
+                    <a class="nav-link p-0" aria-current="page" href="index.html"><i class="bi bi-house"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="dicto.html"><i class="bi bi-pencil-square"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="dictionary.html"><i class="bi bi-journal-text"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active p-0" href="contact.html"><i class="bi bi-envelope"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main class="mb-5 mb-md-0">
         <h2 class="title">Send <span>Message</span></h2>
         <div class="container my-5">
             <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
                 <div class="col">
-                    <p class="p-1 text-center text-md-start">Please provide us with your name and a brief message detailing your
+                    <p class="p-1 text-center text-md-start">Please provide us with your name and a brief message
+                        detailing your
                         feedback. We value your input.</p>
                     <form class="text-center" name="Dicto Mate" method="POST" data-netlify="true">
-                        <input type="text" name="name" id="name" class="form-control px-2 py-3 my-2" placeholder="Your Name"
-                            style="border-radius: 5px;" required>
-                        <textarea name="message" id="message" class="form-control px-2 py-3 my-2" placeholder="Your message"
-                            style="height: 180px; border-radius: 5px;" required></textarea>
+                        <input type="text" name="name" id="name" class="form-control form-control-lg text-capitalize px-3 py-2 my-2"
+                            placeholder="Your Name" style="border-radius: 5px;" required>
+                        <textarea name="message" id="message" class="form-control form-control-lg text-capitalize px-3 py-2 my-2"
+                            placeholder="Your message" style="height: 180px; border-radius: 5px;" required></textarea>
                         <input type="hidden" name="Dicto Mate Form" value="contact">
-                        <button class="btn btn-primary mb-4 px-4 py-3" value="submit"><i class="bi bi-send pe-2"></i>Send</button>
+                        <button class="btn btn-primary mb-4 px-3 py-2" value="submit"><i
+                                class="bi bi-send pe-2"></i>Send</button>
                     </form>
                 </div>
                 <div class="col">
                     <div class="contact-img">
-                        <img src="assets/img/contact.png" alt="Contact Image" class="img-fluid">
+                        <img src="assets/img/contact.png" alt="Contact Image" class="img-fluid flote-img">
                     </div>
                 </div>
             </div>

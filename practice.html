@@ -21,14 +21,62 @@
 
 <body>
     <div class="preloader"></div>
-    <header></header>
-    <h1 class="title">Let's <span>Practice</span></h1>
+    <header>
+        <nav class="des-nav navbar navbar-expand-md d-none d-md-block navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">Dicto Mate</div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dicto.html">Dicto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dictionary.html">Dictionary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link special" href="https://voicytext.netlify.app/" target="_blank">Voicy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="mob-nav d-block d-md-none">
+            <ul class="nav justify-content-around position-fixed">
+                <li class="nav-item">
+                    <a class="nav-link p-0" aria-current="page" href="index.html"><i class="bi bi-house"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="dicto.html"><i class="bi bi-pencil-square"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="dictionary.html"><i class="bi bi-journal-text"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="contact.html"><i class="bi bi-envelope"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main class="mb-5 mb-md-0">
         <div class="container">
+            <h1 class="title">Let's <span>Practice</span></h1>
             <div class="row d-flex justify-content-center" data-main-start>
                 <div class="col col-12 col-md-6 text-center">
                     <div class="heading">
-                        <h4 class="fw-bold m-2" data-start-dicto-name></h4>
+                        <h4 class="fw-bold m-2 text-capitalize" data-start-dicto-name></h4>
                         <label class="form-label mt-2" for="voice">Select Prefer Voice</label>
                         <select class="form-select my-2" name="voice" data-select></select>
                     </div>
@@ -44,17 +92,19 @@
                             Listen selected <b>voice</b>
                         </p>
                         <p class="mb-4"><i class="bi bi-caret-right px-3 py-2 bg-primary rounded-5 text-white"></i>
-                            <b>start</b> practice</p>
+                            <b>start</b> practice
+                        </p>
                         <p class="mb-4"> <i class="bi bi-x-lg px-3 py-2 bg-primary rounded-5 text-white"></i>
-                            <b>Back</b> to see Dicto.</p>
+                            <b>Back</b> to see Dicto.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="row d-flex justify-content-center d-none" data-main-practice>
                 <div class="col col-12 col-md-6 text-center">
                     <div class="heading">
-                        <div class="dicto-name mb-5">
-                            <h4 class="fw-bold m-2" data-dicto-name></h4>
+                        <div class="dicto-name mb-3">
+                            <h4 class="fw-bold m-2 text-capitalize" data-dicto-name></h4>
                         </div>
                     </div>
                     <button class="btn btn-primary btn-lg m-3" data-voice-btn><i class="bi bi-cassette"></i></button>
@@ -78,7 +128,8 @@
                             Repeat<b>Word</b></p>
                         <p class="mb-4"><i class="bi bi-arrow-right px-3 py-2 bg-primary rounded-5 text-white"></i>
                             <b>Next</b>
-                            Word</p>
+                            Word
+                        </p>
                         <p class="mb-4"><i class="bi bi-x-lg px-3 py-2 bg-primary rounded-5 text-white"></i>
                             <b>End</b> practice
                         </p>
@@ -110,6 +161,7 @@
                                 <!-- <li class="list-group-item">An item</li> -->
                             </ul>
                         </div>
+                        <p class="fw-bold my-4">Dark Marked text are your words.</p>
                     </div>
                     <a href="dicto.html" class="btn btn-primary btn-lg mb-3">Dicto</a>
                     <button title="Double Click for Restart" class="btn btn-danger btn-lg mb-3"

@@ -42,6 +42,53 @@
 <body>
     <div class="preloader"></div>
     <header class="position-sticky top-0">
+        <nav class="des-nav navbar navbar-expand-md d-none d-md-block navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">Dicto Mate</div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dicto.html">Dicto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dictionary.html">Dictionary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link special" href="https://voicytext.netlify.app/" target="_blank">Voicy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="mob-nav d-block d-md-none">
+            <ul class="nav justify-content-around position-fixed">
+                <li class="nav-item">
+                    <a class="nav-link active p-0" aria-current="page" href="index.html"><i class="bi bi-house"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="dicto.html"><i class="bi bi-pencil-square"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="dictionary.html"><i class="bi bi-journal-text"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-0" href="contact.html"><i class="bi bi-envelope"></i></a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <div class="add-to m-2 d-block d-md-none">
         <div class="btn btn-primary add-to-btn btn-color"><i class="bi bi-download pe-2"></i>Install App</div>
@@ -52,10 +99,10 @@
                 <div
                     class="row row-cols-1 row-cols-md-2 d-flex justify-content-center align-items-start align-items-md-center">
                     <div class="col">
-                        <h1 class="mx-2 mb-1 text-center text-md-start fw-bold">
-                            Welcome to <span>Dicto Mate</span>
+                        <h1 class="hero-text mx-2 mb-1 text-center text-md-start fw-bold">
+                            <span class="d-block px-2 mx-auto mx-md-0">Dicto Mate</span> Hello,
                         </h1>
-                        <p class="mx-3 mb-4 text-center text-md-start fw-bold">
+                        <p class="mx-2 my-3 text-center text-md-start fw-bold">
                             This Web App helps you to Practice your Dications.
                         </p>
                         <div class="group d-md-flex text-center justify-content-md-start">
@@ -66,7 +113,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <img src="assets/img/hero.png" class="img-fluid" alt="Hero" />
+                        <img src="assets/img/hero.png" class="img-fluid flote-img" alt="Hero" />
                     </div>
                 </div>
             </div>
@@ -85,8 +132,7 @@
                     <div class="col">
                         <div class="card mb-3 p-2 text-bg-primary">
                             <div class="card-body">
-                                <h2 class="mb-4"><i
-                                    class="bi bi-journal-text pe-2"></i> Practice</h2>
+                                <h2 class="mb-4"><i class="bi bi-journal-text pe-2"></i> Practice</h2>
                                 <p>
                                     Click pracktice button for Start Practice your Dictations.
                                 </p>
@@ -113,7 +159,7 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
                     <div class="col">
-                        <img src="assets/img/dictionary.png" alt="dictionary" class="img-fluid" />
+                        <img src="assets/img/dictionary.png" alt="dictionary" class="img-fluid flote-img" />
                     </div>
                     <div class="col text-center text-md-start">
                         <p class="m-2">
@@ -126,7 +172,7 @@
                             lover of language.
                         </p>
                         <a href="dictionary.html" class="btn btn-primary m-2" target="_blank"><i
-                            class="bi bi-journal-text pe-2"></i>Dictionary</a>
+                                class="bi bi-journal-text pe-2"></i>Dictionary</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +182,7 @@
             <div class="container">
                 <h2 class="title">About This <span>Web App</span></h2>
                 <div class="row row-cols-1 row-cols-md-2 my-4 text-center">
-                    <div class="col p-3">
+                    <div class="col p-3 d-flex flex-column justify-content-start">
                         <h3 class="fw-bold">NO Sign Up</h3>
                         <p class="mb-4 p-3">
                             No sign up or email address for use this web app. This is free
@@ -153,10 +199,10 @@
                             created for make money
                         </p>
                     </div>
-                    <div class="col p-3">
+                    <div class="col p-3 d-flex flex-column justify-content-start">
                         <h3 class="fw-bold">Use Same Browser</h3>
                         <p class="mb-4 p-3">
-                            This web app use Local Storage. If you create a Dicto on your
+                            If you create a Dicto on your
                             browser you have to use the same browser that use to create
                             dicto
                         </p>
