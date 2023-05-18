@@ -64,15 +64,18 @@ window.speechSynthesis.onvoiceschanged = function () {
 testVoiceBtn.addEventListener('click', ()=> {
   speechSynthesis.cancel()
   utterance = new SpeechSynthesisUtterance('Test Voice')
+  utterance.rate = 0.8
   if(voices){
     utterance.voice = voices[select.value]
   }
   speechSynthesis.speak(utterance)
+  
 })
 
 function voiceGenarate() {
   speechSynthesis.cancel()
   utterance = new SpeechSynthesisUtterance(practiceWordsArry[wordCount])
+  utterance.rate = 0.8
   if(voices){
     utterance.voice = voices[select.value]
   }

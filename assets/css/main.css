@@ -21,7 +21,7 @@ Wgth 300,400
 
 :root {
     --primary-color: #2fda79;
-    --light-green-color: #8ee9af;
+    --light-green-color: #9be9b7;
     --dark-green-color: #24a55c;
 
     --secondary-color: #0D6EFD;
@@ -36,15 +36,46 @@ Wgth 300,400
     --black-color: #000505;
     --purpul-color: #7209b7;
 
-    --linear-gradient: linear-gradient(to left, var(--dark-green-color), var(--primary-color));;
+    --linear-gradient: linear-gradient(to left, var(--dark-green-color), var(--primary-color));
+    --border-radius: 12px;
+    ;
 }
-
+::selection{
+    color: #000;
+    background: var(--light-green-color);
+}
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--light-green-color);
+    border-radius: 50px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 50px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-green-color);
+  }
 /* genaral css */
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    background-color: #ffffff;
 }
-
+a{
+    color: var(--dark-green-color);
+    text-decoration: none;
+    font-weight: bold;
+}
 header {
     z-index: 1000;
 }
@@ -65,6 +96,7 @@ h5,
 h6 {
     font-family: 'Lora', serif;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .title {
@@ -88,9 +120,12 @@ h6 {
     padding: 0px 4px;
     transition: .5s ease-in-out;
     color: #fff;
+    border-radius: var(--border-radius);
+    white-space: nowrap
 }
+
 .form-control {
-    border-radius: 50px;
+    border-radius: var(--border-radius);
     border: 1px solid var(--primary-color);
     font-family: 'Lora', serif;
 }
@@ -110,7 +145,7 @@ section {
 
 .btn {
     transition: .5s all ease-in-out;
-    border-radius: 50px;
+    border-radius: var(--border-radius);
     border: none;
     padding: 8px 18px;
     font-family: 'Lora', serif;
@@ -162,16 +197,27 @@ section {
 }
 
 /* Index page styles */
+.hero{
+    height: 92vh;
+}
+@media only screen and (max-width: 768px) {
+    .hero{
+        height: auto;
+    }
+  }
 .hero h1 {
     font-size: 50px;
     color: var(--black-color);
 }
-.hero-text span{
+
+.hero-text span {
     background: var(--linear-gradient);
     width: max-content;
     color: #fff;
     font-family: 'Courgette', cursive;
+    border-radius: var(--border-radius);
 }
+
 .about {
     background-color: var(--off-white-color);
 }

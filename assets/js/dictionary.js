@@ -4,13 +4,13 @@ const searchBtn = document.querySelector('[data-search-btn]')
 
 const wordElm = document.querySelector('[data-word]')
 const definitionElm = document.querySelector('[data-definition]')
-const audioElm = document.querySelector('[data-audio-elm]')
-const partOfElm = document.querySelector('[data-partof]')
+const audioElm = document.querySelector('[data-sound-elm]')
 const synonymsElm = document.querySelector('[data-similler]')
 
 
-let audioElmCreate = document.createElement('audio')
-audioElmCreate.setAttribute('controls', true)
+let audioElmCreate = document.createElement('i')
+audioElmCreate.classList.add('bi', 'bi-volume-up', 'pe-2', 'sound-elm')
+
 // Paste Button Function
 pasteBtn.addEventListener('click', async () => {
     try {
@@ -21,27 +21,42 @@ pasteBtn.addEventListener('click', async () => {
     }
 })
 
+// 071 8380957
+
 function data(result, word) {
     if (!result.title) {
         console.log(result)
-        wordElm.innerHTML = `${word}<br><hr>`
-        for(let i = 0; i < result[0].meanings.length; i++){
-            for( let j = 0; j < result[0].meanings[i].definitions.length; j++){
-                definitionElm.innerHTML += `${result[0].meanings[i].definitions[j].definition}<br><br>` 
+        wordElm.innerHTML = `${word}<hr>`
+        // Audio element and add sound
+        audioElm.appendChild(audioElmCreate)
+        utterance = new SpeechSynthesisUtterance(word)
+        utterance.rate = 0.7
+        document.querySelector('.sound-elm').addEventListener('click', () => {
+            speechSynthesis.cancel()
+            speechSynthesis.speak(utterance)
+        })
+
+
+
+        for (let i = 0; i < result[0].meanings.length; i++) {
+            for (let j = 0; j < result[0].meanings[i].definitions.length; j++) {
+                definitionElm.innerHTML += `<p><span class="user-select-all">${result[0].meanings[i].definitions[j].definition}</span><br>
+                Part of Speech - <b>${result[0].meanings[i].partOfSpeech}</b><br>
+                ${result[0].meanings[i].definitions[j].example ? `Examples - <b>${result[0].meanings[i].definitions[j].example}</b>` : ''}
+                </p><br>`
             }
         }
 
         // definitionElm.innerHTML = result[0].meanings[0].definitions[0].definition
-        let audio = result[0].phonetics[0].audio
-        audioElmCreate.setAttribute('src', audio)
-        audio ? audioElm.appendChild(audioElmCreate) : audioElm.innerHTML = ''
-        partOfElm.innerHTML = result[0].meanings[0].partOfSpeech
-        for(let i = 0; i < result[0].meanings[0].synonyms.length ; i++){
-            synonymsElm.innerHTML += `${result[0].meanings[0].synonyms[i]}<br>`
+        for (let i = 0; i < result[0].meanings.length; i++) {
+            for (let j = 0; j < result[0].meanings[i].synonyms.length; j++) {
+                synonymsElm.innerHTML += `<p class="user-select-all">${result[0].meanings[i].synonyms[j]} (${result[0].meanings[i].partOfSpeech})</p>`
+            }
         }
 
     } else {
-        definitionElm.innerHTML = `No Meaning Found.`
+        definitionElm.innerHTML = `<p class="text-danger">We couldn't find a definition for the word you entered. Please check your spelling or try searching for another word.</p>`
+        synonymsElm.innerHTML = '<p class="text-danger">Nothing Found !...</p>'
     }
 }
 
@@ -55,7 +70,6 @@ searchBtn.addEventListener('click', () => {
     input.value = ''
     synonymsElm.innerHTML = ''
     definitionElm.innerHTML = ''
-    partOfElm.innerHTML = ''
 })
 
 
